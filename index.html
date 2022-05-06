@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nathan Huckabay Resume</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+  
+<body>
+  
+  <h1 class="title">Nathan Huckabay - Resume</h1>
+  
+  <table>
+    <tr>
+
+      <td>
+        <img src="images\profile_picture.jpg" alt="Profile Picture">
+      </td>
+
+      <td>
+        <img id="left" class="left" src="images\leftArrow.webp" alt="Left Arrow" height="20%" width="20%" onclick="changeDiv(-1)">
+      </td>
+
+      <td>
+        <div id="divProExperience" class="divProExperience">
+          <h1 id="test">Professional Experience</h1>
+
+          <h2>Oklahoma Air National Guard (June 2014 - Present)</h2>
+
+          <p>TSgt and GS-11 in the United Stated Air Force working a variety of roles during career to include cybersecurity manager, server operator, help desk manager, and alert mission support.</p>
+  
+          <ul>
+            <li>Selected by commander to lead Cyber Mission Assurance Team, a new initiative to improve cyber defense in deployed environment; led 3-person team; championed Open Source Intelligence initiative; parsed 620 million logs; eliminated 3 compromised files on production server; awarded The Air Force Commendation Medal, Flight Non-Commissioned Officer and Team of the Month Award during 6-month deployment.</li>
+            <li>Managed Communications Focal Point (Help Desk); led and trained 4-person team; awarded Chief’s Excellence Award for customer service.</li>
+            <li>Integral member of vulnerability management team; reported vulnerabilities and status of patching to commander, superintendents, and IT teams; utilized Assured Compliance Assessment Solution (ACAS) and Host Based Security System (HBSS) to find vulnerabilities; remediated vulnerable machines by patching using Configuration Manager Current Branch.</li>
+            <li>Participated in two successful NIST Risk Management Framework (RMF) evaluations to receive accreditation for network enclaves.</li>
+            <li>Worked as server operator; maintained both physical and virtual servers; maintained Windows Server 2012R2 through Windows Server 2019; interfaced with project manager, commanders, contractors, and operations team on variety of projects.</li>
+            <li>Wrote production scripts in PowerShell to include base login script improving user experience by mapping share drives, importing browser favorites, and adding required documents to Desktop.</li> 
+            <li>Created customized reports using programing logic to provide critical information and data visualization to decision makers.</li>  
+          </ul>
+        </div>
+
+        <div id="divLangAndTech" class="divLangAndTech">
+          <h1>Languages and Technologies</h1>
+
+          <h2>Proficient</h2>
+          <ul>
+            <li>C#</li> 
+            <li>.Net</li>
+            <li>Java</li>
+            <li>SQL</li>
+            <li>Visual Studio</li>
+            <li>IntelliJ IDEA</li>
+          </ul>
+
+          <h2>Exposure</h2>
+          <ul>
+            <li>Kotlin</li>
+            <li>Android Development</li>
+            <li>Xamarin</li> 
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Git</li>
+            <li>Agile Development</li>
+          </ul>
+        </div>
+
+        <div id="divEducation" class="divEducation" >
+          <h1>Education</h1>
+
+          <h2>Western Governors University</h2>
+          <p>Bachelor of Science, Software Development, October 2020</p>
+
+          <h2>United States Air Force</h2>
+          <p>Associate of Applied Science, Military Information Systems Technology, October 2020</p>
+
+          <h2>Oklahoma State University Institute of Technology</h2>
+          <p>Associate of Science, Information Technology, April 2017</p>
+
+          <h2>Certifications</h2>
+          <p>Oracle Database SQL Certified Associate, August 2020<br>CIW User Interface Designer Certification, June 2020<br>CompTIA Project+ Certification, April 2020<br>CompTIA Security + Certification, March 2016<br>CompTIA A+ Certification, July 2015</p>
+        </div>
+      </td>
+
+      <td>
+        <img id="right" class="right" src="images\rightArrow.webp" alt="Right Arrow" height="20%" width="20%" onclick="changeDiv(1)">
+      </td>
+    </tr>
+  </table>
+
+  <script>  
+    const divs = [document.getElementById("divProExperience"), document.getElementById("divLangAndTech"), document.getElementById("divEducation")];
+    let index = 0;
+
+    function changeDiv(n) { 
+
+      if(index + n >= divs.length) {
+        index = 0;
+      }
+      else if (index + n < 0) {
+        index = 2;
+      }
+      else {
+        index += n; 
+      }
+
+      for(let i = 0; i < divs.length; i++) {
+        divs[i].style.display = "none";
+      }
+
+      divs[index].style.display = "block";
+    }  
+  </script>
+ 
+</body>
+  
+</html>
